@@ -1,0 +1,203 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="مؤسسة وقت الديار للمقاولات - AL DIYAR TIME CONTRACTING EST">
+  <title>وقت الديار للمقاولات | AL DIYAR</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root{--navy:#111b4d;--navy2:#1d2b72;--gold:#c7a45b;--bg:#f7f8fb;--text:#172033;--muted:#667085;--white:#fff;--line:#e8ebf2}
+    *{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth}
+    body{font-family:"Cairo",sans-serif;background:var(--bg);color:var(--text);line-height:1.8}
+    .hero1{
+      background: #1f2c67;
+      color: #fff;
+      min-height:530px;padding-top:82px;display:flex;align-items:center;position:relative;overflow:hidden;
+      background:linear-gradient(110deg,#0d153e 0%,#17245c 55%,#243574 100%)
+    }
+    a{text-decoration:none;color:inherit}
+    img{max-width:100%;display:block}
+    .container{width:min(1160px,92%);margin:auto}
+    header{position:fixed;top:0;right:0;left:0;z-index:50;background:rgba(255,255,255,.94);backdrop-filter:blur(12px);border-bottom:1px solid rgba(0,0,0,.06)}
+    nav{height:87px;display:flex;align-items:center;justify-content:space-between;gap:25px}
+    .brand img{width:115px;height:80px}
+    .links{display:flex;gap:25px;align-items:center;font-weight:700;font-size:14px}
+    .links a{transition:.2s}.links a:hover{color:var(--navy2)}
+    .cta{background:var(--navy);color:#fff;padding:11px 20px;border-radius:10px}
+    .menu{display:none;border:0;background:none;font-size:28px}
+    .hero{min-height:720px;padding-top:82px;display:flex;align-items:center;position:relative;overflow:hidden;background:linear-gradient(110deg,#0d153e 0%,#17245c 55%,#243574 100%);color:#fff}
+    .hero:after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(10,18,54,.92),rgba(18,30,77,.52)),url("assets/project-01.jpg") center/cover;opacity:.42}
+    .hero .container{position:relative;z-index:1}
+    .hero-content{max-width:700px}
+    .eyebrow{display:inline-block;border:1px solid rgba(255,255,255,.25);padding:7px 14px;border-radius:50px;color:#e8d49d;margin-bottom:18px;font-size:13px}
+    h1{font-size:clamp(36px,6vw,68px);line-height:1.2;margin-bottom:18px;font-weight:800}
+    .hero p{font-size:18px;color:#e9ecf6;max-width:650px;margin-bottom:30px}
+    .buttons{display:flex;gap:12px;flex-wrap:wrap}
+    .btn{margin-top: 5%; padding:13px 24px;border-radius:10px;font-weight:800;border:1px solid transparent}
+    .btn.primary{margin-top: 5%;  background:#fff;color:var(--navy)}.btn.secondary{border-color:rgba(255,255,255,.35);color:#fff}
+    section{padding:90px 0}
+    .section-head{text-align:center;max-width:760px;margin:0 auto 45px}
+    .section-head span{color:var(--gold);font-weight:800;font-size:13px}
+    .section-head h2{font-size:34px;margin:5px 0 10px;color:var(--navy)}
+    .section-head p{color:var(--muted)}
+    .about{background:#fff}
+    .about-grid{display:grid;grid-template-columns:1fr 1fr;gap:55px;align-items:center}
+    .about-img{border-radius:22px;overflow:hidden;box-shadow:0 18px 50px rgba(17,27,77,.13)}
+    .about-img img{height:430px;width:100%;object-fit:cover}
+    .about-text h3{font-size:30px;color:var(--navy);margin-bottom:15px}
+    .about-text p{color:var(--muted);margin-bottom:15px}
+    .facts{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:25px}
+    .fact{background:var(--bg);padding:18px;border-radius:13px;text-align:center;border:1px solid var(--line)}
+    .fact b{display:block;color:var(--navy);font-size:20px}.fact small{color:var(--muted)}
+    .services-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+    .card{background:#fff;border:1px solid var(--line);padding:27px;border-radius:18px;transition:.25s}
+    .card:hover{transform:translateY(-5px);box-shadow:0 15px 35px rgba(17,27,77,.09)}
+    .icon{width:48px;height:48px;border-radius:13px;background:#eef1fb;color:var(--navy);display:grid;place-items:center;font-size:23px;margin-bottom:15px}
+    .card h3{font-size:19px;margin-bottom:7px}.card p{font-size:14px;color:var(--muted)}
+    .projects{background:#fff}
+    .gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:15px}
+    .gallery-item{position:relative;overflow:hidden;border-radius:16px;min-height:250px;background:#ddd}
+    .gallery-item:first-child{grid-column:span 2}
+    .gallery-item img{width:100%;height:100%;object-fit:cover;position:absolute;inset:0;transition:.4s}
+    .gallery-item:hover img{transform:scale(1.05)}
+    .overlay{position:absolute;right:15px;left:15px;bottom:15px;background:rgba(10,18,54,.83);color:#fff;padding:10px 14px;border-radius:10px;font-weight:700}
+    .contact{background:linear-gradient(135deg,var(--navy),#273777);color:#fff}
+    .contact-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:35px;align-items:center}
+    .contact h2{font-size:35px;margin-bottom:12px}.contact p{color:#dbe0ef}
+    .contact-box{background:#fff;color:var(--text);border-radius:18px;padding:25px; padding-top:0}
+    .contact-row{padding:12px 0;border-bottom:1px solid var(--line)}.contact-row:last-child{border:0}
+    .contact-row b{display:block;color:var(--navy);font-size:13px}.contact-row span{font-size:15px}
+    footer{background:#0b1132;color:#cdd3e5;padding:24px 0;text-align:center;font-size:13px}
+    @media(max-width:850px){
+      .links{display:none}.menu{display:block}.hero{min-height:650px}
+      .about-grid,.contact-grid{grid-template-columns:1fr}.services-grid{grid-template-columns:1fr 1fr}
+      .gallery{grid-template-columns:1fr 1fr}.gallery-item:first-child{grid-column:span 2}
+    }
+    @media(max-width:560px){
+      .about-img img{height:300px;width:100%;object-fit:cover}
+      nav{height:80px}.brand img{width:130px}.hero{padding-top:70px;min-height:620px}
+      .hero p{font-size:15px}section{padding:65px 0}.section-head h2{font-size:28px}
+      .services-grid,.gallery{grid-template-columns:1fr}.gallery-item:first-child{grid-column:span 1}.gallery-item{height:300px}
+      .facts{grid-template-columns:1fr}
+    }
+  </style>
+</head>
+<body>
+<header>
+  <div class="container">
+    <nav>
+      <a class="brand" href="#home"><img src="assets/logo.png" alt="AL DIYAR"></a>
+      <div class="links">
+        <a href="#about">من نحن</a><a href="#services">خدماتنا</a><a href="#projects">مشاريعنا</a><a href="#contact" class="cta">تواصل معنا</a>
+      </div>
+      <button class="menu" aria-label="القائمة">☰</button>
+    </nav>
+  </div>
+</header>
+
+<main id="home">
+  <section class="hero1">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+        <div class="hero-content col-md-6">
+          <span class="eyebrow">AL DIYAR TIME CONTRACTING EST</span>
+          <h1>نبني الثقة<br>وننجز الأعمال</h1>
+          <p> نحن في مؤسسة وقت الديار نعمل بأحدث المعدات وبفريق فني محترف لإنتاج وتوريد مواد البناء مباشر من الكسارة الي موقعك . </p>
+          <div class="buttons">
+            <a class="btn primary" href="#projects">مشاهدة أعمالنا</a>
+            <a class="btn secondary" href="#contact">تواصل معنا</a>
+          </div>
+        </div>
+        
+      </div> 
+      </div> 
+    </div>
+  </section>
+
+  <section id="about" class="about">
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-img"><img src="assets/logo.png" alt="أعمال الطرق والممرات"></div>
+        <div class="about-text">
+          <span class="eyebrow" style="color:var(--gold);border-color:#eadfbe">من نحن</span>
+          <h3>مؤسسة وقت الديار للمقاولات</h3>
+          <p> مختصون في الحفريات وتكسير الصخور وتوريد مواد البناء الجبلية  </p>
+          <p> نحن في مؤسسة وقت الديار نعمل بأحدث المعدات وبفريق فني محترف لإنتاج وتوريد مواد البناء مباشر من الكسارة الي موقعك . </p>
+          <p> نلتزم بالجودة العالية والمواصفات المعتمدة والسرعة في التوريد لخدمت جمبع المشاريع السكنية والتجارية والصناعية . </p>
+          <div class="facts">
+            <div class="fact"><b>جودة</b><small>في التنفيذ</small></div>
+            <div class="fact"><b>كفاءة</b><small>في التشغيل</small></div>
+            <div class="fact"><b>التزام</b><small>بالمواعيد</small></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="services">
+    <div class="container">
+      <div class="section-head"><span>خدماتنا</span><h2>حلول متكاملة لأعمال المقاولات</h2><p>خدمات     
+مؤسسة وقت الديار للمقاولات       .</p></div>
+      <div class="services-grid">
+        <div class="card"><div class="icon">🏗️</div><h3>توريد  الخرسانة  </h3><p> نوفر لك كل مقاسات  الخرسانة المطلوبة وبي موصفات عالية       .</p></div>
+        <div class="card"><div class="icon">🛣️</div><h3>أعمال الطرق</h3><p> نجهز لك كل  مواد المسارات والأعمال المرتبطة بالطرق والبنية التحتية.</p></div>
+        <div class="card"><div class="icon">⛏️</div><h3> توريد  صبيز  a1a </h3><p> يوجد أفضل  انواع الصبيز للدفم تحت الميدة والاساسات       .</p></div>
+        <div class="card"><div class="icon">🪨</div><h3>توريد البسكورس</h3><p>توريد مواد البسكورس للاستخدامات المناسبة في مشاريع الإنشاء والطرق.</p></div>
+        <div class="card"><div class="icon">🪨</div><h3>توريد الدبش والمواد</h3><p>توفير المواد الحجرية والمواد المطلوبة بحسب مواصفات المشروع.</p></div>
+        <div class="card"><div class="icon">🚜</div><h3>المعدات الثقيلة</h3><p>الاعتماد على معدات وآليات ثقيلة لدعم أعمال التشغيل والتنفيذ.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="projects" class="projects">
+    <div class="container">
+      <div class="section-head"><span>أعمالنا</span><h2>نماذج من المشاريع والأعمال</h2><p>صور من الأعمال والمواد والمعدات   .</p></div>
+      <div class="gallery">
+
+        <video width="400" height="300" controls>
+          <source src="assets/11.mp4" type="video/mp4">
+          <source src="11.ogg" type="video/ogg">
+        </video>
+        <div class="gallery-item"><img src="assets/project-05.jpg" alt="معدات ثقيلة"><div class="overlay">المعدات الثقيلة</div></div>
+        <div class="gallery-item"><img src="assets/project-03.jpg" alt="أعمال الطرق"><div class="overlay">أعمال الطرق والممرات</div></div>
+        <div class="gallery-item"><img src="assets/project-04.jpg" alt="البسكورس"><div class="overlay">البسكورس</div></div>
+        <div class="gallery-item"><img src="assets/4.jpg" alt="الدبش فلتر"><div class="overlay"> خرسانة كل الاحجام </div></div>
+        <div class="gallery-item"><img src="assets/project-02.jpg" alt="معدات ثقيلة"><div class="overlay">المعدات الثقيلة</div></div>
+        <div class="gallery-item"><img src="assets/9.jpg" alt="أعمال الطرق"><div class="overlay"> أفضل الشاحنات  </div></div>
+        <div class="gallery-item"><img src="assets/5.jpg" alt="البسكورس"><div class="overlay"> صبيز  1a1 </div></div>
+        <div class="gallery-item"><img src="assets/1.jpg" alt="الدبش فلتر"><div class="overlay"> معدات حديثة  </div></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="contact">
+    <div class="container">
+      <div class="contact-grid">
+        <div>
+          <span class="eyebrow">تواصل معنا</span>
+          <h2>يسعدنا التعاون معكم</h2>
+          <p> للاستفسارات وطلبات المشاريع، يمكنكم التواصل مع مؤسسة وقت الديار للمقاولات.  </p>
+          <div class="contact-box">
+            <div class="contact-row"> <span style="font-size:20px"> ارقام التواصل   </span> <b> محمد  عيسى  محمد  (ابو فيصل)</b><span>   0593085820   <a style="font-size:20px; margin-right: 40%; color:#25D366"  class="" href="https://wa.me/966593085820" target="_blank"> تواصل واتساب  </a> </span>  </div>
+            <div class="contact-row"> ارقام التواصل  :  <b> أحمد  عيسى  محمد  </b><span>   0595920617   <a style="font-size:20px; margin-right: 40%; color:#25D366"  class="" href="https://wa.me/966595920617" target="_blank"> تواصل واتساب  </a> </span>  </div>
+        </div>
+                </div>
+        <div class="contact-box">
+          <div class="contact-row"><b>اسم المؤسسة</b><span>مؤسسة وقت الديار للمقاولات</span></div>
+          <div class="contact-row"><b>العنوان</b><span>ينبع البحر - البندر - شارع عبد الله ابن المظفر</span></div>
+          <div class="contact-row"><b>الرمز البريدي</b><span>YADC7516 - 46421 - 4327</span></div>
+          <div class="contact-row"><b>السجل التجاري</b><span>7038785064</span></div>
+          <div class="contact-row"><b>الرقم الضريبي</b><span>314269990500003</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+<footer>© 2026 مؤسسة وقت الديار للمقاولات — AL DIYAR TIME CONTRACTING EST</footer>
+</body>
+</html>
