@@ -10,6 +10,26 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <style>
+  
+
+  .language-btn {
+    display: inline-block;
+    padding: 10px 18px;
+    background: rgba(0, 0, 0, 0.75);
+    color: #fff;
+    text-decoration: none;
+    border: 1px solid rgba(255,255,255,0.3);
+    border-radius: 25px;
+    font-size: 15px;
+    font-weight: 600;
+    transition: 0.3s ease;
+  }
+
+  .language-btn:hover {
+    background: #fff;
+    color: #000;
+    transform: translateY(-2px);
+  }
     :root{--navy:#111b4d;--navy2:#1d2b72;--gold:#c7a45b;--bg:#f7f8fb;--text:#172033;--muted:#667085;--white:#fff;--line:#e8ebf2}
     *{box-sizing:border-box;margin:0;padding:0}
     html{scroll-behavior:smooth}
@@ -95,7 +115,11 @@
       <div class="links">
         <a href="#about">من نحن</a><a href="#services">خدماتنا</a><a href="#projects">مشاريعنا</a><a href="#contact" class="cta">تواصل معنا</a>
       </div>
-      <button class="menu" aria-label="القائمة">☰</button>
+      <div class="language-switcher">
+  <a href="index_en.html" class="language-btn">
+    🌐 English
+  </a>
+</div> 
     </nav>
   </div>
 </header>
